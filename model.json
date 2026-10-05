@@ -1,0 +1,150 @@
+{
+  "kind": "mega_asr",
+  "version": "0.1.0",
+  "title": "MEGA ASR",
+  "description": "Transcribe completed recordings with the local pinned MEGA-ASR model and acoustic router.",
+  "repository_url": "https://github.com/HackInvent/bloxmith-mega-asr",
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "prerequisites": [
+    {
+      "type": "executable",
+      "name": "ffmpeg"
+    },
+    {
+      "type": "manual",
+      "name": "Linux, Python 3.11+ inference environment with requirements.txt; explicitly prepared 4.8 GB pinned model/engine assets. Substantial CPU RAM or CUDA resources required."
+    }
+  ],
+  "locales": {
+    "en": "locales/en.json",
+    "fr": "locales/fr.json"
+  },
+  "ports": {
+    "inputs": [
+      {
+        "id": 1,
+        "name": "audio",
+        "title": "Completed audio file",
+        "accepts": [
+          "text/plain",
+          "file/path",
+          "application/json",
+          "message/*"
+        ],
+        "multiplicity": "one",
+        "required": true,
+        "execution_requirement": "required_for_execution"
+      }
+    ],
+    "outputs": [
+      {
+        "id": 1,
+        "name": "transcript",
+        "title": "Final transcript",
+        "emits": [
+          "text/plain",
+          "message/*"
+        ],
+        "multiplicity": "many"
+      },
+      {
+        "id": 2,
+        "name": "metadata",
+        "title": "Transcription metadata",
+        "emits": [
+          "application/json",
+          "message/*"
+        ],
+        "multiplicity": "many"
+      },
+      {
+        "id": 3,
+        "name": "status",
+        "title": "Status",
+        "emits": [
+          "application/json",
+          "message/*"
+        ],
+        "multiplicity": "many"
+      }
+    ]
+  },
+  "config": {
+    "asset_directory": "",
+    "environment_python": "",
+    "allowed_root": "",
+    "device": "cpu",
+    "precision": "bfloat16",
+    "language": "auto",
+    "context": "",
+    "routing": "auto",
+    "quality_threshold": 0.5,
+    "threads": 2,
+    "chunk_duration_sec": 20,
+    "max_duration_sec": 300,
+    "max_file_bytes": 67108864,
+    "max_new_tokens": 512,
+    "timeout_sec": 600,
+    "memory_limit_mib": 16384
+  },
+  "port_capabilities": {
+    "can_add_inputs": false,
+    "can_add_outputs": false
+  },
+  "runtime": {
+    "initial_state": "waiting",
+    "runtime_executable": true,
+    "active_worker": true,
+    "centralized_executor": "generic",
+    "centralized_dependency_mode": "any_event",
+    "file_browser": true,
+    "active_execution_policy": "on_each_event"
+  },
+  "ui_assets": {
+    "modal": [
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/settings.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/block_modal.js"
+      }
+    ],
+    "inspector_panel": [
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/settings.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/inspector_panel.js"
+      }
+    ],
+    "node_card": [
+      {
+        "kind": "css",
+        "path": "assets/css/node_card.css"
+      }
+    ]
+  }
+}

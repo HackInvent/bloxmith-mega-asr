@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "engine": "xzf-thu/Mega-ASR",
+  "engine_revision": "170323232213fedfea9b3ac4308f2c49ba46b25d",
+  "model": "zhifeixie/Mega-ASR",
+  "model_revision": "8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1",
+  "declared_license": "Apache-2.0",
+  "artifacts": [
+    {
+      "path": "engine/README.md",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/README.md",
+      "bytes": 36611,
+      "sha256": "e56cc27443b7b29d597a6fbfc64c10ae4a40bb54fc62b9440ceb74b39d4948b3"
+    },
+    {
+      "path": "engine/src/MegaASR/model/Qwen3_ASR.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/Qwen3_ASR.py",
+      "bytes": 3623,
+      "sha256": "6807be2fcc20b274bf581494e54027c096e9907dbbc34847fd7cb65a3764f141"
+    },
+    {
+      "path": "engine/src/MegaASR/model/Qwen3_ASR_vllm.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/Qwen3_ASR_vllm.py",
+      "bytes": 5212,
+      "sha256": "da31f3efe22c32984c8252bcea5ba31bb5837016f163fc7dcc1a555e99cbcc83"
+    },
+    {
+      "path": "engine/src/MegaASR/model/megaASR.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/megaASR.py",
+      "bytes": 10875,
+      "sha256": "7500b297ba29c0df4972a2256f532b224784422da09883ef5d2de547aaf96acf"
+    },
+    {
+      "path": "engine/src/MegaASR/model/router.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/router.py",
+      "bytes": 4198,
+      "sha256": "a0a7f8e71d6187a2036f6474c164ce10629e6340b1f997fbc2008e9b8e98d220"
+    },
+    {
+      "path": "engine/src/MegaASR/model/utils/__init__.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "engine/src/MegaASR/model/utils/audio_quality.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/utils/audio_quality.py",
+      "bytes": 5834,
+      "sha256": "e01630ebe710d00e00e700687621615ba8ee9292c5ee68a8b13b2c5348192889"
+    },
+    {
+      "path": "engine/src/MegaASR/model/utils/lora_switch.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/utils/lora_switch.py",
+      "bytes": 8748,
+      "sha256": "b8dda5b90f43a73f5901255d4e2b6e2bde9be47fefbb32e02c6635309e5bd730"
+    },
+    {
+      "path": "engine/src/MegaASR/model/utils/materialize_lora.py",
+      "url": "https://raw.githubusercontent.com/xzf-thu/Mega-ASR/170323232213fedfea9b3ac4308f2c49ba46b25d/src/MegaASR/model/utils/materialize_lora.py",
+      "bytes": 3640,
+      "sha256": "f89f34ef3f2db841efed9ad0e3313635c2f498633d1f69c59a70521f3073c9fb"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/README.md",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/README.md",
+      "bytes": 57456,
+      "sha256": "5058416891bc47a2051557765997e8c42f8eb78a0e33c3e775bd17d4b0ba4d50"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/chat_template.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/chat_template.json",
+      "bytes": 1161,
+      "sha256": "75a8cfca24f00de72d796fbfed6858fc9614ef3dabd8696684cc3bc03a9c58ff"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/config.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/config.json",
+      "bytes": 6194,
+      "sha256": "2e74a751548b8ad7d7526d29365ad8144c345d8b412b1152d25dc6698452712f"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/generation_config.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/generation_config.json",
+      "bytes": 128,
+      "sha256": "167fcd0d46020ae6245f3177c47aa1bd419302866933785e1d4d4a07ccc50395"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/merges.txt",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/merges.txt",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/model-00001-of-00002.safetensors",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/model-00001-of-00002.safetensors",
+      "bytes": 4220320824,
+      "sha256": "a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/model-00002-of-00002.safetensors",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/model-00002-of-00002.safetensors",
+      "bytes": 478200688,
+      "sha256": "6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/model.safetensors.index.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/model.safetensors.index.json",
+      "bytes": 64821,
+      "sha256": "f994739fe38e5210b9e3e8ce6c6307315e2ceac3cb630e7b7414d69dce520f60"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/preprocessor_config.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/preprocessor_config.json",
+      "bytes": 330,
+      "sha256": "45e120a4eda2c20c5d7f2ea9354e63536bf35e27aa573fb7cdf78017b378770d"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/tokenizer_config.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/tokenizer_config.json",
+      "bytes": 12487,
+      "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c"
+    },
+    {
+      "path": "weights/Qwen3-ASR-1.7B/vocab.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/Qwen3-ASR-1.7B/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "weights/README.md",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/README.md",
+      "bytes": 5569,
+      "sha256": "eeffcd0ba197390abce299c1288cef3a759378a8994db46ff778ff239dea522b"
+    },
+    {
+      "path": "weights/audio_quality_router/best_acc_model.safetensors",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/audio_quality_router/best_acc_model.safetensors",
+      "bytes": 4693444,
+      "sha256": "87a97950bd178ac9882b6ea03fd7108f79f35097286ae8e079b9d28902ed0d81"
+    },
+    {
+      "path": "weights/mega-asr-merged/adapter_config.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/mega-asr-merged/adapter_config.json",
+      "bytes": 52093,
+      "sha256": "abdd28edf9fe07d340378523334ed552bd34ab042d12eb94ec939efc1eee831f"
+    },
+    {
+      "path": "weights/mega-asr-merged/adapter_model.safetensors",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/mega-asr-merged/adapter_model.safetensors",
+      "bytes": 92538896,
+      "sha256": "7fd88dc65e59d502689323b5a296d82f3d8225a38232773963a829e387d44a31"
+    },
+    {
+      "path": "weights/mega-asr-merged/mega_lora_blocks.json",
+      "url": "https://huggingface.co/zhifeixie/Mega-ASR/resolve/8a10bfd0cccb0c8b3be2852cae1e3ee73d6ffbf1/mega-asr-merged/mega_lora_blocks.json",
+      "bytes": 79473,
+      "sha256": "c3cf4be6b20822baa58e137089381217d7dc6fa678ba30d3047b089dd9ec41af"
+    }
+  ]
+}

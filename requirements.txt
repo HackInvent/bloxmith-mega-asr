@@ -1,0 +1,7 @@
+# Install CPU or CUDA torch wheels explicitly for the intended host first.
+torch==2.10.0
+torchaudio==2.10.0
+qwen-asr==0.0.6
+safetensors==0.7.0
+scipy==1.17.1
+soundfile==0.13.1

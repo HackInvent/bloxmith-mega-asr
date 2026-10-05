@@ -1,0 +1,146 @@
+[
+  {
+    "key": "asset_directory",
+    "label": "Model and engine directory",
+    "type": "directory",
+    "help": "Prepare the pinned 4.8 GB assets with setup_model.py first. No download occurs during a Run."
+  },
+  {
+    "key": "environment_python",
+    "label": "Inference Python executable",
+    "type": "text",
+    "help": "Dedicated environment containing requirements.txt. Empty uses the application's interpreter; never installed automatically."
+  },
+  {
+    "key": "allowed_root",
+    "label": "Permitted audio directory",
+    "type": "directory",
+    "help": "Completed input files must stay inside this directory. Empty uses the application root."
+  },
+  {
+    "key": "device",
+    "label": "Inference device",
+    "type": "select",
+    "options": [
+      "cpu",
+      "cuda:0"
+    ],
+    "help": "CPU or the first CUDA device. Unavailable CUDA fails explicitly; no silent CPU fallback."
+  },
+  {
+    "key": "language",
+    "label": "Language",
+    "type": "select",
+    "options": [
+      "auto",
+      "English",
+      "Chinese"
+    ],
+    "help": "Automatic detection or an explicit training language. No word timestamps or diarization are produced."
+  },
+  {
+    "key": "context",
+    "label": "Vocabulary and context",
+    "type": "textarea",
+    "rows": 3,
+    "help": "Optional context for the transcription, up to 4 KiB. It is not a command or a post-transcription agent instruction."
+  },
+  {
+    "key": "routing",
+    "label": "Acoustic adaptation",
+    "type": "select",
+    "options": [
+      "auto",
+      "mega"
+    ],
+    "help": "Automatic routes each chunk through the base or adapted model. Always MEGA forces the official LoRA adapter."
+  },
+  {
+    "key": "quality_threshold",
+    "label": "Degraded-audio threshold",
+    "type": "number",
+    "min": 0,
+    "max": 1,
+    "when": {
+      "routing": [
+        "auto"
+      ]
+    },
+    "advanced": true,
+    "help": "Router probability threshold for applying the MEGA adapter. Not transcription confidence."
+  },
+  {
+    "key": "precision",
+    "label": "Numeric precision",
+    "type": "select",
+    "options": [
+      "float32",
+      "bfloat16"
+    ],
+    "advanced": true,
+    "help": "Float32 for CPU compatibility; bfloat16 reduces model memory but depends on the device."
+  },
+  {
+    "key": "threads",
+    "label": "CPU threads",
+    "type": "integer",
+    "min": 1,
+    "max": 16,
+    "advanced": true,
+    "help": "Bound CPU parallelism in the owned inference process."
+  },
+  {
+    "key": "chunk_duration_sec",
+    "label": "Chunk duration (seconds)",
+    "type": "integer",
+    "min": 5,
+    "max": 30,
+    "advanced": true,
+    "help": "Longer recordings are split into contiguous chunks. Boundaries may split words; these are input spans, not word timestamps."
+  },
+  {
+    "key": "max_duration_sec",
+    "label": "Maximum recording duration (seconds)",
+    "type": "integer",
+    "min": 1,
+    "max": 1800,
+    "advanced": true,
+    "help": "Refuse longer files instead of silently truncating them. Default: five minutes."
+  },
+  {
+    "key": "max_file_bytes",
+    "label": "Maximum input size (bytes)",
+    "type": "integer",
+    "min": 1024,
+    "max": 268435456,
+    "advanced": true,
+    "help": "Bound the completed source before conversion. Default: 64 MiB."
+  },
+  {
+    "key": "max_new_tokens",
+    "label": "Maximum generated tokens per chunk",
+    "type": "integer",
+    "min": 32,
+    "max": 2048,
+    "advanced": true,
+    "help": "A missing end-of-sequence fails the whole request instead of publishing an incomplete transcript."
+  },
+  {
+    "key": "timeout_sec",
+    "label": "Total request deadline (seconds)",
+    "type": "integer",
+    "min": 1,
+    "max": 3600,
+    "advanced": true,
+    "help": "Includes conversion, checksum verification, loading and every chunk. CPU inference can be slow."
+  },
+  {
+    "key": "memory_limit_mib",
+    "label": "Process address-space limit (MiB)",
+    "type": "integer",
+    "min": 2048,
+    "max": 65536,
+    "advanced": true,
+    "help": "Linux virtual-memory ceiling, not a reservation or GPU-memory guarantee. Loading fails if insufficient."
+  }
+]
